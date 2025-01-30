@@ -1,0 +1,73 @@
+<header>
+  <nav>
+    <span id="textoSup"></span>
+
+    <select id="tipoM" *ngIf="opcionSeleccionada === 'menus'" (change)="filtrarPlatos($event)">
+      <option value="" disabled selected>
+        Seleccione el menú
+      </option>
+      <option value="basico">MENÚ BÁSICO</option>
+      <option value="especial">MENÚ ESPECIAL</option>
+    </select>
+    <a (click)="verLista()" id="elemCompra">VER LISTA PRODUCTOS SELECCIONADOS</a>
+
+  </nav>
+</header>
+<app-lista-pedidos *ngIf="verListaProductos" [platosSeleccionados]="platosSeleccionados" (anularPedidoEvent)="anularPedido()" (cerrarListaEvent)="ocultarLista()"></app-lista-pedidos>
+
+<div id="opcionPlatos" *ngIf="opcionSeleccionada === 'platos'">
+  <h2 class="platosMenu">PLATOS</h2>
+  <section>
+    <div class="card" *ngFor="let plato of platos">
+      <img [src]="'assets/' + plato.imagen" alt="{{ plato.titulo }}" />
+      <p>{{ plato.titulo }}</p>
+      <p>
+        <span>{{ plato.precio }} </span>€
+
+        <br />
+        <input type="button" value="Añadir a lista" (click)="agregarPlato(plato)" />
+        </p>
+    </div>
+  </section>
+</div>
+
+<div id="opcionMenus" *ngIf="opcionSeleccionada === 'menus'">
+  <h2 class="platosMenu">PRIMEROS PLATOS</h2>
+  <section>
+    <div *ngFor="let plato of platosFiltrados">
+    <div class="card"  *ngIf="plato.orden === 'primero'">
+      <img [src]="'assets/' + plato.imagen" alt="{{ plato.titulo }}" />
+      <p>{{ plato.titulo }}</p>
+      <input type="checkbox" class="classCheckbox" [id]="plato.id" [value]="plato.id" />
+      Seleccionar
+      <br />
+    </div>
+  </div>
+  </section>
+
+  <h2 class="platosMenu">SEGUNDOS PLATOS</h2>
+  <section>
+    <div *ngFor="let plato of platosFiltrados">
+    <div class="card"  *ngIf="plato.orden === 'segundo'">
+      <img [src]="'assets/' + plato.imagen" alt="{{ plato.titulo }}" />
+      <p>{{ plato.titulo }}</p>
+      <input type="checkbox" class="classCheckbox" [id]="plato.id" [value]="plato.id" />
+      Seleccionar
+      <br />
+    </div>
+  </div>
+  </section>
+
+  <h2 class="platosMenu">POSTRES</h2>
+  <section>
+    <div *ngFor="let plato of platosFiltrados" >
+    <div class="card" *ngIf="plato.orden === 'postre'">
+      <img [src]="'assets/' + plato.imagen" alt="{{ plato.titulo }}" />
+      <p>{{ plato.titulo }}</p>
+      <input type="checkbox" class="classCheckbox" [id]="plato.id" [value]="plato.id" />
+      Seleccionar
+      <br />
+    </div>
+  </div>
+  </section>
+</div>

@@ -1,0 +1,20 @@
+h2 {
+  text-align: center;
+}
+#pagos,
+#formPedido,
+#botones {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+#botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+span {
+  display: inline-block;
+  width: 150px;
+}

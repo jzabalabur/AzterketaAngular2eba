@@ -1,0 +1,36 @@
+<section class="listaPedido">
+  <h2>LISTA DE PLATOS/MENUS SOLICITADOS</h2>
+  <hr />
+  <table class="table" id="platosPedidos">
+    <thead class="thead-dark">
+      <tr>
+        <th>Plato/Menu</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plato of platosSeleccionados">
+        <td>
+          <p class="fw-normal mb-1">{{plato.titulo}}</p>
+        </td>
+        <td>{{plato.cantidad}}</td>
+        <td>{{plato.precio}}</td>
+        <td>
+          <div class="d-flex align-items-center">
+            <img
+              [src]="'assets/' + plato.imagen"
+              alt="{{ plato.titulo }}"
+              style="width: 45px; height: 45px"
+              class="rounded-circle"
+            />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="borrarPedido()" id="btnAnularPedido">Anular Pedido</button>
+
+  <button (click)="cerrarLista()" id="btnCancelar">CANCELAR</button>
+</section>

@@ -1,0 +1,150 @@
+/*ESTILOS ENCABEZADO AMBAS PAGINAS*/
+header div:nth-child(2) img {
+  width: 100%;
+  height: 30%;
+}
+header div:nth-child(1) img {
+  width: 30%;
+  height: 10%;
+}
+
+nav {
+  background: #ff8800;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+nav a {
+  color: black;
+  background: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-left: 10px;
+}
+nav span {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: bolder;
+}
+nav select {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/*FIN ESTILOS ENCABEZADO AMBAS PAGINAS */
+
+/*ESTILOS ZONA CARDS AMBAS PAGINAS*/
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+section .card {
+  border: 1px solid silver;
+  margin: 15px;
+  background-color: #ffecd6;
+  text-align: center;
+  max-width: 250px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section .card img {
+  width: 100%;
+}
+section .card span {
+  font-size: 18px;
+}
+section .card button {
+  font-weight: bolder;
+  background: #ff8800;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+/**********ESTILO PAGINA INDEX************/
+
+#pagIndex section .card button {
+  width: 50%;
+  align-self: center;
+}
+
+/* ESTILO PAGINA ELEGIR_PRODUCTO************/
+#elegirProd section .card {
+  display: none;
+}
+/************MEDIA QUERY*******************************************/
+
+@media (max-width: 716px) {
+  #light {
+    flex-direction: column;
+  }
+  .modal {
+    position: absolute;
+  }
+  .modal .modalElem {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  #pagIndex section,
+  #elegirProd section {
+    flex-wrap: wrap;
+  }
+
+  #pagIndex header div:nth-child(2) img {
+    display: none;
+  }
+  #pagIndex header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  #pagIndex header nav a {
+    width: 50%;
+    margin: 5px;
+  }
+
+  #elegirProd section .card {
+    width: 90%;
+  }
+  #elegirProd nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #elegirProd nav a {
+    margin-top: 5px;
+  }
+  #elegirProd nav select {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+@media (min-width: 451px) and (max-width: 675px) {
+  #elegirProd section {
+    flex-wrap: wrap;
+  }
+  #elegirProd section .card {
+    width: 40%;
+  }
+  #elegirProd nav select {
+    padding-top: 3px;
+    padding-bottom: 2px;
+  }
+}
+@media (min-width: 451px) and (max-width: 775px) {
+  #pagIndex section {
+    flex-wrap: wrap;
+  }
+  #pagIndex section .card {
+    width: 40%;
+  }
+  #pagIndex nav select {
+    padding-top: 3px;
+    padding-bottom: 2px;
+  }
+}

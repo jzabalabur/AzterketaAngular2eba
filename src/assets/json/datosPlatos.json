@@ -1,0 +1,102 @@
+[
+    {
+      "id":1,
+      "orden": "primero",
+      "titulo": "Ensalada de  pasta con pollo",
+      "imagen": "img/EnsaladaDePastaConPollo.png",
+      "precio": 3,
+      "basico": true,
+      "especial": false
+    },
+            {"id":2,
+      "orden": "primero",
+                "titulo": "Lentejas levantinas",
+                "imagen": "img/LentejasLevantinas.png",
+                "precio": 2.5,
+                "basico": false,
+                "especial": true
+            },
+            { "id":3,
+      "orden": "primero",
+                "titulo": "Espinacas con Jamon",
+                "imagen": "img/espinacasConJamon.png",
+                "precio": 3,
+                "basico": true,
+                "especial": false
+            },
+            {"id":4,
+      "orden": "primero",
+                "titulo": "Fideos orientales con soja",
+                "imagen": "img/fideosOrientalesConSoja.png",
+                "precio": 3.5,
+                "basico": true,
+                "especial": true
+            }
+   ,
+    {    "id":5,
+        "orden": "segundo",
+               "titulo": "Bacalao en salsa de piquillo",
+                "imagen": "img/BacalaoEnSalsaDePiquillo.png",
+                "precio": 4,
+                "basico": true,
+                "especial": false
+           },
+                {  "id":6,
+        "orden": "segundo",
+                    "titulo": "Estofado de pavo",
+                    "imagen": "img/EstofadoDePavo.png",
+                    "precio": 3,
+                    "basico": true,
+                    "especial": false
+                },
+                {  "id":7,
+        "orden": "segundo",
+                    "titulo": "Merluza en salsa verde",
+                    "imagen": "img/merluzaSalsaVerde.png",
+                    "precio": 3.5,
+                    "basico": false,
+                    "especial": true
+                },
+                {  "id":8,
+        "orden": "segundo",
+                    "titulo": "Salteado de verduras",
+                    "imagen": "img/salteadoDeVerduras.png",
+                    "precio": 2.5,
+                    "basico": false,
+                    "especial": true
+                },
+
+    { "id":9,
+      "orden": "postre",
+      "titulo": "Cremoso de Mascarpone",
+       "imagen": "img/CremosoDeMascarpone.png",
+        "precio": 3,
+        "basico": false,
+         "especial": true
+            },
+            {"id":10,
+      "orden": "postre",
+            "titulo": "Flan de leche condensada",
+                    "imagen": "img/FlanDeLecheCondensada.png",
+                    "precio": 3,
+                    "basico": true,
+                    "especial": false
+            },
+            {"id":11,
+      "orden": "postre",
+            "titulo": "Tiramisu",
+                    "imagen": "img/tiramisu.png",
+                    "precio": 3.25,
+                    "basico": true,
+                    "especial": false
+            },
+            {"id":12,
+      "orden": "postre",
+            "titulo": "Tarta helada de limón",
+                    "imagen": "img/tartaHeladaDeLimon.png",
+                    "precio": 3.5,
+                    "basico": true,
+                    "especial": true
+            }
+
+    ]
